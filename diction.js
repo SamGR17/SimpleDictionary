@@ -143,6 +143,8 @@ function searchWord(){
    //This variable grabs what the user typed into the textbox
    const userInput = textInput.value.toLowerCase();
 
+   defsCont.textContent = "";
+
     if(userInput === ""){
         PartOfSpeech.innerText = "Enter a word!"; 
         return;
@@ -153,8 +155,6 @@ function searchWord(){
     }
     
     PartOfSpeech.innerText = dictionary[userInput].PartOfSpeech
-
-    defsCont.textContent = "";
 
     for(let i = 0; i < dictionary[userInput].Definitions.length; i++){
        const defs = document.createElement("p")
